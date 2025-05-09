@@ -36,13 +36,14 @@ body {
 }
 
 .question {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.8rem, 5vw, 4rem);
   margin-bottom: 30px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
   flex-wrap: wrap;
 }
