@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dristy ♡ Priyodip</title>
+  <link rel="icon" href="./icons/h2.png" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Video Background -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="./videos/bg.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <h1 class="question">Dristy, Do You Love Me?</h1>
+    <div class="buttons">
+      <button id="yesBtn">Yes 💖</button>
+      <button id="noBtn">No 🙈</button>
+    </div>
+    <p id="note" class="hidden" style="color: rgb(196, 14, 14);">Awww! I knew it! I love you more 😘</p>
+    <div id="heartPopup" class="hidden">💘💞💖</div>
+  </div>
+
+  <!-- Sweet Modal -->
+  <div id="backdrop"></div>
+  <div id="modal">
+    <p style="font-weight: bold; font-size: medium;"><strong>Oops! You can't say No, I am your man Priyodip 😅</strong></p>
+    <button id="closeModal" style="margin-top: 10px;">Okay, I get it 💗</button>
+  </div>
+
+  <!-- Error Sound -->
+  <audio id="errorSound" src="./sounds/error.mp3" preload="auto"></audio>
+  <audio id="yesSound" src="./sounds/aww.mp3" preload="auto"></audio>
+
+  <!-- Script -->
+  <script src="./js/script.js"></script>
+</body>
+</html>

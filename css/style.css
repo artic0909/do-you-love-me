@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  top: 20%;
+  padding: 20px;
+  color: white;
+}
+
+.question {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  padding: clamp(10px, 3vw, 15px) clamp(20px, 6vw, 30px);
+  border: none;
+  border-radius: 30px;
+  background-color: #db0e0e;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  max-width: 200px;
+  width: 100%;
+}
+
+#noBtn {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  padding: clamp(10px, 3vw, 15px) clamp(20px, 6vw, 30px);
+  border: none;
+  border-radius: 30px;
+  background-color: #ff7272;
+  color: white;
+  cursor: pointer;
+}
+
+#closeModal {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  padding: 5px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ff69b4;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  max-width: 200px;
+  width: 100%;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+}
+
+#note {
+  margin-top: 20px;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+}
+
+.hidden {
+  display: none;
+}
+
+#heartPopup {
+  font-size: 2rem;
+  animation: pop 1s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+#modal,
+#backdrop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  display: none;
+  z-index: 999;
+}
+
+#backdrop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 998;
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-52%, -48%) rotate(2deg);
+  }
+  50% {
+    transform: translate(-48%, -52%) rotate(-2deg);
+  }
+  75% {
+    transform: translate(-51%, -49%) rotate(1deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .buttons button {
+    width: 70%;
+    max-width: 250px;
+  }
+}
